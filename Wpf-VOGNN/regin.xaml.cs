@@ -33,7 +33,7 @@ namespace Wpf_VOGNN
 
         private void reg_Click(object sender, RoutedEventArgs e)
         {
-            if (TextBox_login.Text.Length > 0) // проверяем логин
+            if (TextBox_login.Text.Length > 0) // проверяем логин.
             {
                 string[] dataLogin = TextBox_login.Text.Split('@'); // делим строку на две части
                 if (dataLogin.Length == 2) // проверяем если у нас две части
