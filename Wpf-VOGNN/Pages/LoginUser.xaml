@@ -5,14 +5,14 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Wpf_VOGNN"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="450" d:DesignWidth="800" Background="White"
       Title="LoginUser">
     <Grid>
-        <TextBox x:Name="TextBox_login" Margin="300,156,300,260" TextWrapping="Wrap"/>
+        <TextBox x:Name="TextBox_login" Margin="300,156,300,276" TextWrapping="Wrap"/>
         <Button x:Name="enter" Click="enter_Click" Content="Войти" Margin="300,233,300,181"/>
         <Button x:Name="regin" Click="regin_Click" Content="Регистрация" Margin="300,258,300,156"/>
         <PasswordBox x:Name="password" Margin="300,199,300,217"/>
-        <Label Content="Логин:" Margin="300,130,454,278"/>
+        <Label Content="Логин:" Margin="300,130,454,294"/>
         <Label Content="Пароль:" Margin="300,174,446,235"/>
 
     </Grid>

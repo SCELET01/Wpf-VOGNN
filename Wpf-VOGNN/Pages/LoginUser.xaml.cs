@@ -29,20 +29,20 @@ namespace Wpf_VOGNN
 
         private void enter_Click(object sender, RoutedEventArgs e)
         {
-            //if (TextBox_login.Text.Length > 0) // проверяем введён ли логин     
-            //{
-            //    if (password.Password.Length > 0) // проверяем введён ли пароль         
-            //    {             // ищем в базе данных пользователя с такими данными         
-            //        DataTable dt_user = mainWindow.Select("SELECT * FROM [dbo].[users] WHERE [login] = '" + TextBox_login.Text + "' AND [password] = '" + password.Password + "'");
-            //        if (dt_user.Rows.Count > 0) // если такая запись существует       
-            //        {
-            //            MessageBox.Show("Пользователь авторизовался"); // говорим, что авторизовался         
-            //        }
-            //        else MessageBox.Show("Пользователя не найден"); // выводим ошибку  
-            //    }
-            //    else MessageBox.Show("Введите пароль"); // выводим ошибку    
-            //}
-            //else MessageBox.Show("Введите логин"); // выводим ошибку
+            if (TextBox_login.Text.Length > 0) // проверяем введён ли логин     
+            {
+                if (password.Password.Length > 0) // проверяем введён ли пароль         
+                {             // ищем в базе данных пользователя с такими данными         
+                    DataTable dt_user = mainWindow.Select("SELECT * FROM [dbo].[users] WHERE [login] = '" + TextBox_login.Text + "' AND [password] = '" + password.Password + "'");
+                    if (dt_user.Rows.Count > 0) // если такая запись существует       
+                    {
+                        MessageBox.Show("Пользователь авторизовался"); // говорим, что авторизовался         
+                    }
+                    else MessageBox.Show("Пользователя не найден"); // выводим ошибку  
+                }
+                else MessageBox.Show("Введите пароль"); // выводим ошибку    
+            }
+            else MessageBox.Show("Введите логин"); // выводим ошибку
         }
         private void regin_Click(object sender, RoutedEventArgs e)
         {
