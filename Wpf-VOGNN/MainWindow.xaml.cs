@@ -1,6 +1,8 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 using System.Windows;
+using Wpf_VOGNN.Pages;
 
 namespace Wpf_VOGNN
 {
@@ -26,7 +28,8 @@ namespace Wpf_VOGNN
         public enum pages
         {
             login,
-            regin
+            regin,
+            mainPage
         }
 
         public void OpenPage(pages pages)//функция открытия окон
@@ -37,12 +40,16 @@ namespace Wpf_VOGNN
             }
             else if (pages == pages.regin)
             {
-                frame.Navigate(new regin(this));//открываем форму регистрации
+                frame.Navigate(new ReginUser(this));//открываем форму регистрации
+            }
+            else if (pages == pages.mainPage)
+            {
+                frame.Navigate(new MainPage(this));
             }
 
         }
 
-        public DataTable Select(string selectSQL) 
+        public DataTable Select(string selectSQL)
         {
             DataTable dataTable = new DataTable("dataBase");
             SqlConnection sqlConnection = new SqlConnection("server=(LocalDb)\\VOG.NN;Trusted_Connection=Yes;DataBase=VOG.NN;");
@@ -51,6 +58,7 @@ namespace Wpf_VOGNN
             sqlCommand.CommandText = selectSQL;
             SqlDataAdapter sqlDataAdapter = new SqlDataAdapter(sqlCommand);
             sqlDataAdapter.Fill(dataTable);
+            sqlConnection.Close();
             return dataTable;
         }
     }

@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using static Wpf_VOGNN.MainWindow;
 
 namespace Wpf_VOGNN
 {
@@ -25,7 +26,10 @@ namespace Wpf_VOGNN
         public LoginUser(MainWindow _mainWindow)
         {
             InitializeComponent();
+            mainWindow = _mainWindow;
         }
+
+
 
         private void enter_Click(object sender, RoutedEventArgs e)
         {
@@ -36,6 +40,7 @@ namespace Wpf_VOGNN
                     DataTable dt_user = mainWindow.Select("SELECT * FROM [dbo].[users] WHERE [login] = '" + TextBox_login.Text + "' AND [password] = '" + password.Password + "'");
                     if (dt_user.Rows.Count > 0) // если такая запись существует       
                     {
+                        this.mainWindow.OpenPage(pages.mainPage);
                         MessageBox.Show("Пользователь авторизовался"); // говорим, что авторизовался         
                     }
                     else MessageBox.Show("Пользователя не найден"); // выводим ошибку  

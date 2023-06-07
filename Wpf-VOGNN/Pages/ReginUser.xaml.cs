@@ -17,10 +17,10 @@ namespace Wpf_VOGNN
     /// <summary>
     /// Логика взаимодействия для regin.xaml
     /// </summary>
-    public partial class regin : Window
+    public partial class ReginUser : Page
     {
         public MainWindow mainWindow;
-        public regin(MainWindow _mainWindow)
+        public ReginUser(MainWindow _mainWindow)
         {
             InitializeComponent();
             mainWindow = _mainWindow;
@@ -41,24 +41,25 @@ namespace Wpf_VOGNN
                     string[] data2Login = dataLogin[1].Split('.'); // делим вторую часть ещё на две части
                     if (data2Login.Length == 2)
                     {
-
+                        if (password.Password.Length > 0) // проверяем пароль
+                        {
+                            if (password_Copy.Password.Length > 0) // проверяем второй пароль
+                            {
+                                if (password.Password == password_Copy.Password) // проверка на совпадение паролей
+                                {
+                                    DataSet1TableAdapters.usersTableAdapter users = new DataSet1TableAdapters.usersTableAdapter();
+                                    users.InsertUsers(TextBox_login.Text, password.Password);
+                                    MessageBox.Show("Пользователь зарегистрирован");
+                                }
+                                else MessageBox.Show("Пароли не совподают");
+                            }
+                            else MessageBox.Show("Повторите пароль");
+                        }
+                        else MessageBox.Show("Укажите пароль");
                     }
                     else MessageBox.Show("Укажите логин в форме х@x.x");
                 }
                 else MessageBox.Show("Укажите логин в форме х@x.x");
-                if (password.Password.Length > 0) // проверяем пароль
-                {
-                    if (password_Copy.Password.Length > 0) // проверяем второй пароль
-                    {
-                        if (password.Password == password_Copy.Password) // проверка на совпадение паролей
-                        {
-                            MessageBox.Show("Пользователь зарегистрирован");
-                        }
-                        else MessageBox.Show("Пароли не совподают");
-                    }
-                    else MessageBox.Show("Повторите пароль");
-                }
-                else MessageBox.Show("Укажите пароль");
             }
             else MessageBox.Show("Укажите логин");
         }
