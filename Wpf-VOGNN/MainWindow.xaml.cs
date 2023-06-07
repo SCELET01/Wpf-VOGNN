@@ -61,5 +61,15 @@ namespace Wpf_VOGNN
             sqlConnection.Close();
             return dataTable;
         }
+
+        private void frame_Navigated(object sender, System.Windows.Navigation.NavigationEventArgs e)
+        {
+
+        }
+
+        private void Image_ImageFailed(object sender, ExceptionRoutedEventArgs e)
+        {
+
+        }
     }
 }

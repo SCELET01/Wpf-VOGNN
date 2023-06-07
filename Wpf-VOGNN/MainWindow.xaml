@@ -5,9 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_VOGNN"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="НРО ОООИ &quot;ВОГ&quot;" Height="594" Width="898" ShowInTaskbar="False" Icon="/image/logo.png" WindowState="Maximized">
+
     <Grid>
-        <Frame x:Name="frame" NavigationUIVisibility="Hidden"/>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Frame x:Name="frame" NavigationUIVisibility="Hidden" Navigated="frame_Navigated" Margin="0,115,0,0"/>
+        <Image HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Source="/image/logo.png" />
+        <Label Content="НИЖЕГОРОДСКОЕ РЕГИОНАЛЬНОЕ ОТДЕЛЕНИЕ&#xD;&#xA;ОБЩЕРОССИЙСКАЯ ОБЩЕСТВЕННАЯ ОРГАНИЗАЦИЯ&#xA;&quot;ВСЕРОССИЙСКОЕ ОБЩЕСТВО ГЛУХИХ&quot;" Margin="115,10,0,0" VerticalAlignment="Top" Height="100" FontFamily="Arial Black" FontSize="25" HorizontalAlignment="Left" Width="770"/>
 
     </Grid>
 </Window>

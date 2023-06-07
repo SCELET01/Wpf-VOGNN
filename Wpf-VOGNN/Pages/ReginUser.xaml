@@ -5,17 +5,18 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_VOGNN"
         mc:Ignorable="d"
-        Title="regin" Height="450" Width="800" Background="White">
+        Title="regin" Height="300" Width="280" Background="CornflowerBlue">
+
     <Grid>
-        <TextBox x:Name="TextBox_login" Margin="300,131,0,0" TextWrapping="Wrap" HorizontalAlignment="Left" Width="200" Height="18" VerticalAlignment="Top"/>
-        <Button x:Name="reg" Click="reg_Click" Content="Регистрация" Margin="300,250,0,0" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="200"/>
-        <Button x:Name="back" Click="back_Click" Content="Отмена" Margin="300,275,0,0" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="200"/>
-        <PasswordBox x:Name="password" Margin="300,174,0,0" Height="18" VerticalAlignment="Top" HorizontalAlignment="Left" Width="200"/>
-        <Label Content="Логин:" Margin="300,106,0,0" HorizontalAlignment="Left" Width="46" Height="25" VerticalAlignment="Top"/>
-        <Label Content="Пароль:" Margin="300,149,0,0" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="54"/>
-        <Label Content="Повторите пароль:" Margin="300,192,0,0" Width="118" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left"/>
-        <PasswordBox x:Name="password_Copy" Margin="300,0,0,0" Height="18" VerticalAlignment="Center" HorizontalAlignment="Left" Width="200"/>
-        <Label Content="РЕГИСТРАЦИЯ" HorizontalAlignment="Center" Height="45" Margin="0,56,0,0" VerticalAlignment="Top" Width="200" FontWeight="Bold" FontSize="24"/>
+        <TextBox x:Name="TextBox_login" Margin="0,106,0,0" TextWrapping="Wrap" HorizontalAlignment="Center" Width="200" Height="18" VerticalAlignment="Top"/>
+        <Button x:Name="reg" Click="reg_Click" Content="Регистрация" Margin="0,226,0,0" Height="20" VerticalAlignment="Top" HorizontalAlignment="Center" Width="200"/>
+        <Button x:Name="back" Click="back_Click" Content="Отмена" Margin="0,250,0,0" Height="20" VerticalAlignment="Top" HorizontalAlignment="Center" Width="200"/>
+        <PasswordBox x:Name="password" Margin="0,149,0,0" Height="18" VerticalAlignment="Top" HorizontalAlignment="Center" Width="200"/>
+        <Label Content="Логин:" Margin="40,81,0,0" HorizontalAlignment="Left" Width="46" Height="25" VerticalAlignment="Top"/>
+        <Label Content="Пароль:" Margin="40,124,0,0" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left" Width="54"/>
+        <Label Content="Повторите пароль:" Margin="40,167,0,0" Width="118" Height="25" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+        <PasswordBox x:Name="password_Copy" Margin="0,191,0,0" Height="18" VerticalAlignment="Top" HorizontalAlignment="Center" Width="200"/>
+        <Label Content="РЕГИСТРАЦИЯ" HorizontalAlignment="Center" Height="45" Margin="0,31,0,0" VerticalAlignment="Top" Width="200" FontWeight="Bold" FontSize="24"/>
 
     </Grid>
 </Page>

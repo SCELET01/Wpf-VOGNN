@@ -49,6 +49,7 @@ namespace Wpf_VOGNN
                                 {
                                     DataSet1TableAdapters.usersTableAdapter users = new DataSet1TableAdapters.usersTableAdapter();
                                     users.InsertUsers(TextBox_login.Text, password.Password);
+                                    mainWindow.OpenPage(MainWindow.pages.login);
                                     MessageBox.Show("Пользователь зарегистрирован");
                                 }
                                 else MessageBox.Show("Пароли не совподают");
