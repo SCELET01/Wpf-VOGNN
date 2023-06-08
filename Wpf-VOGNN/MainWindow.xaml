@@ -5,15 +5,42 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_VOGNN"
         mc:Ignorable="d"
-        Title="НРО ОООИ &quot;ВОГ&quot;" Height="594" Width="898" ShowInTaskbar="False" Icon="/image/logo.png" WindowState="Maximized">
+        Title="НРО ОООИ &quot;ВОГ&quot;" Height="594" Width="898" ShowInTaskbar="False" Icon="/image/logo.png" WindowState="Maximized"
+        >
+    <Window.Resources>
+        <Style x:Key="LabelStBord" TargetType="{x:Type Label}">
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="HorizontalContentAlignment" Value="Left"/>
+            <Setter Property="VerticalContentAlignment" Value="Top"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Label}">
+                        <Border CornerRadius="20" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Padding="{TemplateBinding Padding}" SnapsToDevicePixels="true">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Window.Background>
+        <ImageBrush ImageSource="/image/8270289.jpg" />
+    </Window.Background>
 
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Frame x:Name="frame" NavigationUIVisibility="Hidden" Navigated="frame_Navigated" Margin="0,115,0,0"/>
-        <Image HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="100" Source="/image/logo.png" />
-        <Label Content="НИЖЕГОРОДСКОЕ РЕГИОНАЛЬНОЕ ОТДЕЛЕНИЕ&#xD;&#xA;ОБЩЕРОССИЙСКАЯ ОБЩЕСТВЕННАЯ ОРГАНИЗАЦИЯ&#xA;&quot;ВСЕРОССИЙСКОЕ ОБЩЕСТВО ГЛУХИХ&quot;" Margin="115,10,0,0" VerticalAlignment="Top" Height="100" FontFamily="Arial Black" FontSize="25" HorizontalAlignment="Left" Width="770"/>
-
+        <Frame x:Name="frame" NavigationUIVisibility="Hidden" Navigated="frame_Navigated" Margin="10,115,10,10"/>
+        <Label Style="{DynamicResource LabelStBord}" Content="&#x9;  НИЖЕГОРОДСКОЕ РЕГИОНАЛЬНОЕ ОТДЕЛЕНИЕ &#xA;&#x9;  ОБЩЕРОССИЙСКАЯ ОБЩЕСТВЕННАЯ ОРГАНИЗАЦИЯ &#xA;&#x9;  &quot;ВСЕРОССИЙСКОЕ ОБЩЕСТВО ГЛУХИХ&quot;" Margin="10,10,13,0" VerticalAlignment="Top" Height="100" FontFamily="Arial Black" FontSize="25" Foreground="#FF3F519C" Background="#66FFFFFF"/>
+        <Image HorizontalAlignment="Left" Height="90" Margin="17,15,0,0" VerticalAlignment="Top" Width="90" Source="/image/logo.png" />
+        
     </Grid>
 </Window>
