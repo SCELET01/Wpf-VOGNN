@@ -47,10 +47,14 @@ namespace Wpf_VOGNN
                             {
                                 if (password.Password == password_Copy.Password) // проверка на совпадение паролей
                                 {
-                                    DataSet1TableAdapters.usersTableAdapter users = new DataSet1TableAdapters.usersTableAdapter();
-                                    users.InsertUsers(TextBox_login.Text, password.Password);
-                                    mainWindow.OpenPage(MainWindow.pages.login);
-                                    MessageBox.Show("Пользователь зарегистрирован");
+                                    if (TextBox_RKey.Text == "q1w2e3")
+                                    {
+                                        DataSet1TableAdapters.usersTableAdapter users = new DataSet1TableAdapters.usersTableAdapter();
+                                        users.InsertUsers(TextBox_login.Text, password.Password);
+                                        mainWindow.OpenPage(MainWindow.pages.login);
+                                        MessageBox.Show("Пользователь зарегистрирован");
+                                    }
+                                    else MessageBox.Show("Введите регистрационный ключ");
                                 }
                                 else MessageBox.Show("Пароли не совподают");
                             }
