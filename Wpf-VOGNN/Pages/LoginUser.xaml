@@ -11,12 +11,12 @@
 
     <Grid>
         <Border Background="#66FFFFFF" CornerRadius="20"/>
-        <TextBox x:Name="TextBox_login" Margin="0,116,0,0" TextWrapping="Wrap" HorizontalAlignment="Center" Width="200" Height="18" VerticalAlignment="Top"/>
-        <PasswordBox x:Name="password" Margin="0,159,0,0" HorizontalAlignment="Center" Width="200" Height="18" VerticalAlignment="Top"/>
-        <Button x:Name="enter" Click="enter_Click" Content="Войти" Margin="0,193,0,0" HorizontalAlignment="Center" Width="200" Height="20" VerticalAlignment="Top"/>
-        <Button x:Name="regin" Click="regin_Click" Content="Регистрация" Margin="0,218,0,0" HorizontalAlignment="Center" Width="200" Height="20" VerticalAlignment="Top"/>
-        <Label Content="Логин:" Margin="41,91,0,0" HorizontalAlignment="Left" Width="46" Height="25" VerticalAlignment="Top"/>
-        <Label Content="Пароль:" Margin="41,134,0,0" HorizontalAlignment="Left" Width="54" Height="25" VerticalAlignment="Top"/>
+        <TextBox x:Name="TextBox_login" Margin="0,116,0,0" TextWrapping="Wrap" HorizontalAlignment="Center" Width="200" Height="18" VerticalAlignment="Top" FontFamily="Arial"/>
+        <PasswordBox x:Name="password" Margin="0,159,0,0" HorizontalAlignment="Center" Width="200" Height="18" VerticalAlignment="Top" FontFamily="Arial"/>
+        <Button x:Name="enter" Click="enter_Click" Content="Войти" Margin="0,193,0,0" HorizontalAlignment="Center" Width="200" Height="20" VerticalAlignment="Top" FontFamily="Arial"/>
+        <Button x:Name="regin" Click="regin_Click" Content="Регистрация" Margin="0,218,0,0" HorizontalAlignment="Center" Width="200" Height="20" VerticalAlignment="Top" FontFamily="Arial"/>
+        <Label Content="Логин:" Margin="41,91,0,0" HorizontalAlignment="Left" Width="46" Height="25" VerticalAlignment="Top" FontFamily="Arial"/>
+        <Label Content="Пароль:" Margin="41,134,0,0" HorizontalAlignment="Left" Width="54" Height="25" VerticalAlignment="Top" FontFamily="Arial"/>
         <Label Content="АВТОРИЗАЦИЯ" HorizontalAlignment="Center" Height="45" Margin="0,41,0,0" VerticalAlignment="Top" Width="200" FontWeight="Bold" FontSize="24"/>
 
     </Grid>

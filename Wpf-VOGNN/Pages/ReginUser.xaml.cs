@@ -47,7 +47,7 @@ namespace Wpf_VOGNN
                             {
                                 if (password.Password == password_Copy.Password) // проверка на совпадение паролей
                                 {
-                                    if (TextBox_RKey.Text == "q1w2e3")
+                                    if (TextBox_RKey.Text == "Q982-9AH8-3HZS-R3PV")
                                     {
                                         DataSet1TableAdapters.usersTableAdapter users = new DataSet1TableAdapters.usersTableAdapter();
                                         users.InsertUsers(TextBox_login.Text, password.Password);
