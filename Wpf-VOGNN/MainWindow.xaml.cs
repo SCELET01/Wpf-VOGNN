@@ -29,7 +29,8 @@ namespace Wpf_VOGNN
         {
             login,
             regin,
-            mainPage
+            mainPage,
+            spisok
         }
 
         public void OpenPage(pages pages)//функция открытия окон
@@ -45,6 +46,10 @@ namespace Wpf_VOGNN
             else if (pages == pages.mainPage)
             {
                 frame.Navigate(new MainPage(this));
+            }
+            else if (pages == pages.spisok) 
+            {
+                frame.Navigate(new Spisok(this));
             }
 
         }

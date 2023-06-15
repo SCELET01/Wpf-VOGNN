@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,24 +14,20 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-
 namespace Wpf_VOGNN.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainPage.xaml
+    /// Логика взаимодействия для Spisok.xaml
     /// </summary>
-    public partial class MainPage : Page
+    public partial class Spisok : Page
     {
         public MainWindow mainWindow;
-        public MainPage(MainWindow _mainWindow)
+        public Spisok(MainWindow _mainWindow)
         {
             InitializeComponent();
             mainWindow = _mainWindow;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            mainWindow.OpenPage(MainWindow.pages.spisok);
-        }
+
     }
 }
