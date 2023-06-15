@@ -10,9 +10,17 @@
 
     <Grid>
         <Border Background="#66FFFFFF" CornerRadius="20">
-            <DataGrid x:Name="DataGridSpisok" d:ItemsSource="{d:SampleData ItemCount=5}" Height="370" VerticalAlignment="Top" HorizontalAlignment="Center" Width="720" Margin="0,40,0,0" SelectionChanged="DataGridSpisok_SelectionChanged"/>
-                
-            
+            <DataGrid x:Name="DataGridSpisok" Margin="57,0,0,0" AutoGenerateColumns="False" HorizontalAlignment="Left" Width="512" Height="386" VerticalAlignment="Center">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Id}" Header="Id" Width="50"/>
+                    <DataGridTextColumn Binding="{Binding Surname}" Header="Фамилия" Width="150"/>
+                    <DataGridTextColumn Binding="{Binding Name}" Header="Имя" Width="150"/>
+                    <DataGridTextColumn Binding="{Binding Patronymic}" Header="Отчество" Width="150"/>
+
+                </DataGrid.Columns>
+            </DataGrid>
+
+
         </Border>
     </Grid>
 </Page>

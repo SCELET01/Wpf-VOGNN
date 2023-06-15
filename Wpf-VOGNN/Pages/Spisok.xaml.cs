@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,8 +28,21 @@ namespace Wpf_VOGNN.Pages
         {
             InitializeComponent();
             mainWindow = _mainWindow;
+            binddatagrid();
         }
 
-
+        private void binddatagrid()
+        {
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = ConfigurationManager.ConnectionStrings["connusers"].ConnectionString;
+            con.Open();
+            SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = "select * from UchetnayaCard";
+            cmd.Connection = con;
+            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable("UchetnayaCard");
+            da.Fill(dt);
+            DataGridSpisok.ItemsSource = dt.DefaultView;
+        }
     }
 }
