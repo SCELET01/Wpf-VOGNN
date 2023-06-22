@@ -22,5 +22,6 @@
 
 
         </Border>
+        <Button Content="На главную" Margin="0,0,14,10" VerticalAlignment="Bottom" Click="ButMainPage_Click" Height="24" HorizontalAlignment="Right" Width="140"/>
     </Grid>
 </Page>

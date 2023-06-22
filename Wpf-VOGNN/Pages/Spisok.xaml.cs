@@ -44,5 +44,10 @@ namespace Wpf_VOGNN.Pages
             da.Fill(dt);
             DataGridSpisok.ItemsSource = dt.DefaultView;
         }
+
+        private void ButMainPage_Click(object sender, RoutedEventArgs e)
+        {
+            mainWindow.OpenPage(MainWindow.pages.mainPage);
+        }
     }
 }

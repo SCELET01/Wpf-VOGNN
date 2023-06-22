@@ -7,37 +7,34 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Documents;
-using System.Windows.Forms;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-
 namespace Wpf_VOGNN.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainPage.xaml
+    /// Логика взаимодействия для AddUchetCard.xaml
     /// </summary>
-    public partial class MainPage : Page
+    public partial class AddUchetCard : Page
     {
         public MainWindow mainWindow;
-        public MainPage(MainWindow _mainWindow)
+        public AddUchetCard(MainWindow _mainWindow)
         {
             InitializeComponent();
             mainWindow = _mainWindow;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ButMainPage_Click(object sender, RoutedEventArgs e)
         {
-            mainWindow.OpenPage(MainWindow.pages.spisok);
+            mainWindow.OpenPage(MainWindow.pages.mainPage);
         }
 
-        private void ButAddUC_Click(object sender, RoutedEventArgs e)
+        private void ButSave_Click(object sender, RoutedEventArgs e)
         {
-            mainWindow.OpenPage(MainWindow.pages.addUC);
+
         }
-        
     }
 }

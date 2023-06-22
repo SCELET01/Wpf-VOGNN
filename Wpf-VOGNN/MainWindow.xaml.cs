@@ -30,7 +30,8 @@ namespace Wpf_VOGNN
             login,
             regin,
             mainPage,
-            spisok
+            spisok,
+            addUC
         }
 
         public void OpenPage(pages pages)//функция открытия окон
@@ -50,6 +51,10 @@ namespace Wpf_VOGNN
             else if (pages == pages.spisok) 
             {
                 frame.Navigate(new Spisok(this));
+            }
+            else if (pages == pages.addUC)
+            {
+                frame.Navigate(new AddUchetCard(this));
             }
 
         }
