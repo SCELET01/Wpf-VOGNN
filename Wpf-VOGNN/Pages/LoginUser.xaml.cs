@@ -41,7 +41,7 @@ namespace Wpf_VOGNN
                     if (dt_user.Rows.Count > 0) // если такая запись существует       
                     {
                         this.mainWindow.OpenPage(pages.mainPage);
-                        MessageBox.Show("Пользователь авторизовался"); // говорим, что авторизовался         
+                        //MessageBox.Show("Пользователь авторизовался"); // говорим, что авторизовался         
                     }
                     else MessageBox.Show("Пользователя не найден"); // выводим ошибку  
                 }

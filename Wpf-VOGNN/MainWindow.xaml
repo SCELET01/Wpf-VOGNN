@@ -35,12 +35,9 @@
     </Window.Background>
 
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
         <Frame x:Name="frame" NavigationUIVisibility="Hidden" Navigated="frame_Navigated" Margin="10,115,10,10"/>
         <Label Style="{DynamicResource LabelStBord}" Content="&#x9;  НИЖЕГОРОДСКОЕ РЕГИОНАЛЬНОЕ ОТДЕЛЕНИЕ &#xA;&#x9;  ОБЩЕРОССИЙСКАЯ ОБЩЕСТВЕННАЯ ОРГАНИЗАЦИЯ &#xA;&#x9;  &quot;ВСЕРОССИЙСКОЕ ОБЩЕСТВО ГЛУХИХ&quot;" Margin="10,10,13,0" VerticalAlignment="Top" Height="100" FontFamily="Arial Black" FontSize="25" Foreground="#FF3F519C" Background="#66FFFFFF"/>
         <Image HorizontalAlignment="Left" Height="90" Margin="17,15,0,0" VerticalAlignment="Top" Width="90" Source="/images/logo.png" />
-        
+
     </Grid>
 </Window>

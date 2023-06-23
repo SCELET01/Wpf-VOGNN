@@ -13,7 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using Wpf_VOGNN.Windows;
 
 namespace Wpf_VOGNN.Pages
 {
@@ -36,7 +36,8 @@ namespace Wpf_VOGNN.Pages
 
         private void ButAddUC_Click(object sender, RoutedEventArgs e)
         {
-            mainWindow.OpenPage(MainWindow.pages.addUC);
+            AddUchCardWindow addUchCard = new AddUchCardWindow();
+            addUchCard.Show();
         }
         
     }

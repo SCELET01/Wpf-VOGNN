@@ -66,9 +66,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </Compile>
-    <Compile Include="Pages\AddUchetCard.xaml.cs">
-      <DependentUpon>AddUchetCard.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\LoginUser.xaml.cs">
       <DependentUpon>LoginUser.xaml</DependentUpon>
     </Compile>
@@ -78,10 +75,9 @@
     <Compile Include="Pages\ReginUser.xaml.cs">
       <DependentUpon>ReginUser.xaml</DependentUpon>
     </Compile>
-    <Page Include="Pages\AddUchetCard.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
+    <Compile Include="Windows\AddUchCardWindow.xaml.cs">
+      <DependentUpon>AddUchCardWindow.xaml</DependentUpon>
+    </Compile>
     <Page Include="Pages\LoginUser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -107,6 +103,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Spisok.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Windows\AddUchCardWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
