@@ -7,6 +7,10 @@
         mc:Ignorable="d"
         Title="Создание учетной карточки" Height="900" Width="1600" WindowState="Maximized">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
 
 
     </Grid>
