@@ -23,5 +23,14 @@ namespace Wpf_VOGNN.Windows
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            PrintDialog pd = new PrintDialog();
+            if (pd.ShowDialog() == true)
+            {
+                pd.PrintVisual(GridPrint, "Печать");
+            }
+        }
     }
 }

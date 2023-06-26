@@ -5,12 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_VOGNN.Windows"
         mc:Ignorable="d"
-        Title="Создание учетной карточки" Height="900" Width="1600" WindowState="Maximized">
-    <Grid>
+        Title="Создание учетной карточки" Height="917" Width="1400" MinWidth="1400" MaxWidth="1400" MinHeight="917" MaxHeight="917">
+    <Grid Name="GridPrint" MinWidth="1400" MaxWidth="1400" MinHeight="900" MaxHeight="900">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
+        <Button x:Name="ButPrint" Grid.Column="1" Content="" Margin="0,0,10,10" Click="Button_Click" HorizontalAlignment="Right" Width="45" Height="45" VerticalAlignment="Bottom">
+            <Button.Background>
+                <ImageBrush ImageSource="/images/gui_print_icon_157059.png"/>
+            </Button.Background>
+        </Button>
 
 
     </Grid>

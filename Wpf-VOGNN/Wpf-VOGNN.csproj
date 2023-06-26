@@ -157,5 +157,8 @@
   <ItemGroup>
     <Resource Include="images\8270289.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="images\gui_print_icon_157059.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
