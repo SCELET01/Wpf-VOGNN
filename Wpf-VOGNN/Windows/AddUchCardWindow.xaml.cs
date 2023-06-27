@@ -29,7 +29,7 @@ namespace Wpf_VOGNN.Windows
             PrintDialog pd = new PrintDialog();
             if (pd.ShowDialog() == true)
             {
-                pd.PrintVisual(GridPrint, "Печать");
+                pd.PrintVisual(RegtPrint, "Печать");
             }
         }
     }
