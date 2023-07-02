@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_VOGNN.Windows"
         mc:Ignorable="d"
-        Title="Создание учетной карточки" Height="838" Width="1215" Icon="/images/logo.png">
-    <Grid Name="GridPrint" MinWidth="1200" MaxWidth="1200" MinHeight="800" MaxHeight="800" Background="#FF358BA7">
+        Title="Создание учетной карточки" Height="839" Width="1216" Icon="/images/logo.png">
+    <Grid Name="GridPrint" MinWidth="1200" MaxWidth="1200" MinHeight="800" MaxHeight="800">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
@@ -16,9 +16,333 @@
                 <ImageBrush ImageSource="/images/gui_print_icon_157059.png"/>
             </Button.Background>
         </Button>
-        <Rectangle x:Name="RegtPrint" HorizontalAlignment="Left" Height="800" Margin="10,0,0,0" Stroke="Black" VerticalAlignment="Top" Width="1190" Grid.ColumnSpan="2">
-            
-        </Rectangle>
+        <Border BorderBrush="Black" BorderThickness="1" Margin="22,21,454,624">
+            <Image HorizontalAlignment="Left" Height="149" Margin="2,2,0,0" VerticalAlignment="Top" Width="118"/>
+        </Border>
+        <Label Content="    Общероссийская общественная&#xD;&#xA;           огранизация инвалидов&#xD;&#xA;«Всероссийское общество глухих»" HorizontalAlignment="Left" Height="74" Margin="168,10,0,0" VerticalAlignment="Top" Width="286" FontFamily="Times New Roman" FontSize="18"/>
+        <Label Content="Учетная карточка" HorizontalAlignment="Left" Height="37" Margin="218,89,0,0" VerticalAlignment="Top" Width="198" FontFamily="Times New Roman" FontSize="20" FontWeight="Bold"/>
+        <Label Content="Членский билет" HorizontalAlignment="Left" Height="40" Margin="153,129,0,0" VerticalAlignment="Top" Width="152" FontFamily="Times New Roman" FontSize="20"/>
+        <Label Content="Форма 1" HorizontalAlignment="Left" Margin="493,-2,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="14"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="39" Margin="469,21,0,0" VerticalAlignment="Top" Width="121">
+            <Label Content="        РО ВОГ" FontSize="14" FontFamily="Times New Roman" Margin="0,4,0,0"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="39" Margin="469,59,0,0" VerticalAlignment="Top" Width="121"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="39" Margin="469,97,0,0" VerticalAlignment="Top" Width="121">
+            <Label Content="        МО ВОГ" FontSize="14" FontFamily="Times New Roman" Margin="0,4,0,0"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="38" Margin="469,135,0,0" VerticalAlignment="Top" Width="121"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="22,175,0,0" VerticalAlignment="Top" Width="90">
+            <Label Content="Фамилия" FontFamily="Times New Roman"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="22,199,0,0" VerticalAlignment="Top" Width="90">
+            <Label Content="Имя" FontFamily="Times New Roman"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="22,223,0,0" VerticalAlignment="Top" Width="90">
+            <Label Content="Отчество" FontFamily="Times New Roman"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="112,175,0,0" VerticalAlignment="Top" Width="216">
+            <TextBox x:Name="Surname" TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="112,199,0,0" VerticalAlignment="Top" Width="216">
+            <TextBox x:Name="Name"  TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="112,223,0,0" VerticalAlignment="Top" Width="216">
+            <TextBox x:Name="Patronymic" TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="328,175,0,0" VerticalAlignment="Top" Width="155">
+            <Label Content="         Место рождения" FontFamily="Times New Roman"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="482,175,0,0" VerticalAlignment="Top" Width="108">
+            <Label Content="  Дата рождения" FontFamily="Times New Roman"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="49" Margin="328,199,0,0" VerticalAlignment="Top" Width="155">
+            <TextBox x:Name="MestoRozhd" TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="49" Margin="482,199,0,0" VerticalAlignment="Top" Width="108">
+            <TextBox x:Name="DateOfBirth" TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="52" Margin="22,248,0,0" VerticalAlignment="Top" Width="90">
+            <Label Content="Паспорт" FontFamily="Times New Roman" Margin="0,13,0,0"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="112,248,0,0" VerticalAlignment="Top" Width="166">
+            <Label Content="             Серия / Номер" FontFamily="Times New Roman"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="112,272,0,0" VerticalAlignment="Top" Width="166">
+            <TextBox x:Name="Pasport" TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="277,248,0,0" VerticalAlignment="Top" Width="206">
+            <Label Content="              Кем выдан паспорт" FontFamily="Times New Roman"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="277,272,0,0" VerticalAlignment="Top" Width="206">
+            <TextBox x:Name="kemVidan" TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="482,248,0,0" VerticalAlignment="Top" Width="108">
+            <Label Content="    Дата выдачи" FontFamily="Times New Roman"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="482,272,0,0" VerticalAlignment="Top" Width="108">
+            <TextBox x:Name="DateVidachi" TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="43" Margin="22,299,0,0" VerticalAlignment="Top" Width="309">
+            <Label Content="         Страховое свидетельство государственного&#xD;&#xA;                пенсионного страхования (СНИЛС)" FontFamily="Times New Roman"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="22,341,0,0" VerticalAlignment="Top" Width="309">
+            <TextBox x:Name="SNILS" TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="43" Margin="330,299,0,0" VerticalAlignment="Top" Width="260">
+            <Label Content="    (Индивидуальная программа реабилитации&#xD;&#xA;                        и абилитации) ИПРА" FontFamily="Times New Roman"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="330,341,0,0" VerticalAlignment="Top" Width="260">
+            <TextBox x:Name="IPRa" TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="44" Margin="22,366,0,0" VerticalAlignment="Top" Width="95">
+            <Label Content="      Дата&#xD;&#xA;вступления&#xD;&#xA;     в ВОГ" FontFamily="Times New Roman" Margin="5,-5,0,-3"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="83" Margin="22,409,0,0" VerticalAlignment="Top" Width="95">
+            <TextBox x:Name="DateVstVOG"  TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="44" Margin="116,366,0,0" VerticalAlignment="Top" Width="162">
+            <Label Content="             Справка МСЭ" FontFamily="Times New Roman" Margin="0,9,0,0"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="29" Margin="116,409,0,0" VerticalAlignment="Top" Width="162">
+            <TextBox x:Name="MSE"  TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="116,437,0,0" VerticalAlignment="Top" Width="162">
+            <Label Content="     Группа инвалидности" FontFamily="Times New Roman"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="116,464,0,0" VerticalAlignment="Top" Width="162">
+            <TextBox x:Name="GrInvalid" TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="44" Margin="277,366,0,0" VerticalAlignment="Top" Width="101">
+            <Label Content="       Причина&#xD;&#xA;  инвалидности" FontFamily="Times New Roman"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="44" Margin="377,366,0,0" VerticalAlignment="Top" Width="106">
+            <Label Content="  Срок действия&#xD;&#xA;   справки МСЭ" FontFamily="Times New Roman"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="83" Margin="277,409,0,0" VerticalAlignment="Top" Width="101">
+            <TextBox x:Name="PrInvalid" TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="83" Margin="377,409,0,0" VerticalAlignment="Top" Width="106">
+            <TextBox x:Name="SrokMSE" TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="44" Margin="482,366,0,0" VerticalAlignment="Top" Width="108">
+            <Label Content="     Состояние &#xD;&#xA;          слуха&#xD;&#xA;     (отметить)" FontFamily="Times New Roman" Margin="0,-6,0,-4"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="83" Margin="482,409,0,0" VerticalAlignment="Top" Width="108">
+            <TextBox x:Name="StatusSlukha" TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="22,491,0,0" VerticalAlignment="Top" Width="198">
+            <Label Content="                 Владение РЖЯ" FontFamily="Times New Roman"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="219,491,0,0" VerticalAlignment="Top" Width="371">
+            <TextBox x:Name="VladRZHYA" TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="109" Margin="22,519,0,0" VerticalAlignment="Top" Width="167">
+            <Label Content="            Образование &#xD;&#xA;          (основное общее,&#xD;&#xA;      среднее общее, среднее&#xD;&#xA;         профессиональное,&#xD;&#xA;       неоконченное высшее, &#xD;&#xA;      высшее, ученая степень)" FontFamily="Times New Roman"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="109" Margin="188,519,0,0" VerticalAlignment="Top" Width="402">
+            <Label Content="                                               Место работы (учебы)" FontFamily="Times New Roman" Margin="0,42,0,0"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="73" Margin="22,627,0,0" VerticalAlignment="Top" Width="167">
+            <TextBox x:Name="Obrazovanie" TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="188,627,0,0" VerticalAlignment="Top" Width="402">
+            <TextBox x:Name="MestoObraz" TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="188,651,0,0" VerticalAlignment="Top" Width="402">
+            <Label Content="                                                        Должность" FontFamily="Times New Roman"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="188,675,0,0" VerticalAlignment="Top" Width="402">
+            <TextBox x:Name="Dolgn" TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="30" Margin="22,700,0,0" VerticalAlignment="Top" Width="109">
+            <Label Content="Адрес проживания" FontFamily="Times New Roman"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="46" Margin="22,729,0,0" VerticalAlignment="Top" Width="183">
+            <Label Content="Адрес фактического проживания" FontFamily="Times New Roman" Margin="0,10,0,0"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="30" Margin="130,700,0,0" VerticalAlignment="Top" Width="274">
+            <TextBox x:Name="AddressProzh" TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="46" Margin="204,729,0,0" VerticalAlignment="Top" Width="200">
+            <TextBox x:Name="AddressPhaktProzh" TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="30" Margin="403,700,0,0" VerticalAlignment="Top" Width="187">
+            <Label Content="         Мобильный телефон и &#xD;&#xA;             электронная почта" FontFamily="Times New Roman" Margin="0,-6,0,-4"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="46" Margin="403,729,0,0" VerticalAlignment="Top" Width="187">
+            <TextBox x:Name="TelEmail" TextWrapping="Wrap"/>
+        </Border>
+        <Label Grid.Column="1" Content="Согласие на обработку персональных данных в ОООИ ВОГ получено:" HorizontalAlignment="Left" Margin="16,0,0,0" VerticalAlignment="Top" FontWeight="Bold" FontFamily="Arial"/>
+        <Label Grid.Column="1" Content="Дата выдачи билета:" HorizontalAlignment="Left" Margin="16,25,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="14"/>
+        <Label Grid.Column="1" Content="Подпись председателя РО:" HorizontalAlignment="Left" Margin="362,26,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="14"/>
+        <Label Grid.Column="1" Content="Отметки по учету" HorizontalAlignment="Center" Margin="0,88,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="16"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="40" Margin="16,148,0,0" VerticalAlignment="Top" Width="83" Grid.Column="1">
+            <TextBox TextWrapping="Wrap" TextChanged="TextBox_TextChanged"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="16,121,0,0" VerticalAlignment="Top" Width="83" Grid.Column="1">
+            <Label Content="      Дата" FontFamily="Times New Roman"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="98,121,0,0" VerticalAlignment="Top" Width="190" Grid.Column="1">
+            <Label Content="     Наименование структурного&#xD;&#xA;                подразделения" FontFamily="Times New Roman" Margin="0,-7,0,-5"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="287,121,0,0" VerticalAlignment="Top" Width="141" Grid.Column="1">
+            <Label Content="       Зачислен / Снят" FontFamily="Times New Roman"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="427,121,0,0" VerticalAlignment="Top" Width="131" Grid.Column="1">
+            <Label Content="Подпись председателя" FontFamily="Times New Roman"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="40" Margin="16,187,0,0" VerticalAlignment="Top" Width="83" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="40" Margin="16,226,0,0" VerticalAlignment="Top" Width="83" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="40" Margin="16,265,0,0" VerticalAlignment="Top" Width="83" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="40" Margin="98,148,0,0" VerticalAlignment="Top" Width="190" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="40" Margin="98,187,0,0" VerticalAlignment="Top" Width="190" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="40" Margin="98,226,0,0" VerticalAlignment="Top" Width="190" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="40" Margin="98,265,0,0" VerticalAlignment="Top" Width="190" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="21" Margin="287,148,0,0" VerticalAlignment="Top" Width="141" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="20" Margin="287,168,0,0" VerticalAlignment="Top" Width="141" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="21" Margin="287,187,0,0" VerticalAlignment="Top" Width="141" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="20" Margin="287,207,0,0" VerticalAlignment="Top" Width="141" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="21" Margin="287,226,0,0" VerticalAlignment="Top" Width="141" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="20" Margin="287,246,0,0" VerticalAlignment="Top" Width="141" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="21" Margin="287,265,0,0" VerticalAlignment="Top" Width="141" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="20" Margin="287,285,0,0" VerticalAlignment="Top" Width="141" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="21" Margin="427,148,0,0" VerticalAlignment="Top" Width="131" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="20" Margin="427,168,0,0" VerticalAlignment="Top" Width="131" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="21" Margin="427,187,0,0" VerticalAlignment="Top" Width="131" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="20" Margin="427,207,0,0" VerticalAlignment="Top" Width="131" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="21" Margin="427,226,0,0" VerticalAlignment="Top" Width="131" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="20" Margin="427,246,0,0" VerticalAlignment="Top" Width="131" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="21" Margin="427,265,0,0" VerticalAlignment="Top" Width="131" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="20" Margin="427,285,0,0" VerticalAlignment="Top" Width="131" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Label Grid.Column="1" Content="Уплата членских взносов" HorizontalAlignment="Left" Margin="214,306,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="16"/>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="16,338,0,0" VerticalAlignment="Top" Width="83" Grid.Column="1">
+            <Label Content="Год" FontFamily="Times New Roman"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="16,362,0,0" VerticalAlignment="Top" Width="83" Grid.Column="1">
+            <Label Content="Сумма" FontFamily="Times New Roman"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="16,386,0,0" VerticalAlignment="Top" Width="83" Grid.Column="1">
+            <Label Content="Подпись" FontFamily="Times New Roman"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="98,338,0,0" VerticalAlignment="Top" Width="58" Grid.Column="1">
+            <TextBox TextWrapping="Wrap" TextChanged="TextBox_TextChanged_1"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="155,338,0,0" VerticalAlignment="Top" Width="58" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="212,338,0,0" VerticalAlignment="Top" Width="58" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="269,338,0,0" VerticalAlignment="Top" Width="58" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="326,338,0,0" VerticalAlignment="Top" Width="58" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="383,338,0,0" VerticalAlignment="Top" Width="58" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="440,338,0,0" VerticalAlignment="Top" Width="58" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="497,338,0,0" VerticalAlignment="Top" Width="58" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="98,362,0,0" VerticalAlignment="Top" Width="58" Grid.Column="1">
+            <TextBox TextWrapping="Wrap" TextChanged="TextBox_TextChanged"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="155,362,0,0" VerticalAlignment="Top" Width="58" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="212,362,0,0" VerticalAlignment="Top" Width="58" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="269,362,0,0" VerticalAlignment="Top" Width="58" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="326,362,0,0" VerticalAlignment="Top" Width="58" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="383,362,0,0" VerticalAlignment="Top" Width="58" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="440,362,0,0" VerticalAlignment="Top" Width="58" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="497,362,0,0" VerticalAlignment="Top" Width="58" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="98,386,0,0" VerticalAlignment="Top" Width="58" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="155,386,0,0" VerticalAlignment="Top" Width="58" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="212,386,0,0" VerticalAlignment="Top" Width="58" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="269,386,0,0" VerticalAlignment="Top" Width="58" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="326,386,0,0" VerticalAlignment="Top" Width="58" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="383,386,0,0" VerticalAlignment="Top" Width="58" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="440,386,0,0" VerticalAlignment="Top" Width="58" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="497,386,0,0" VerticalAlignment="Top" Width="58" Grid.Column="1">
+            <TextBox TextWrapping="Wrap"/>
+        </Border>
+
 
 
     </Grid>
