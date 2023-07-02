@@ -44,7 +44,7 @@
             <TextBox x:Name="Surname" TextWrapping="Wrap"/>
         </Border>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="112,199,0,0" VerticalAlignment="Top" Width="216">
-            <TextBox x:Name="Name"  TextWrapping="Wrap"/>
+            <TextBox x:Name="Nname"  TextWrapping="Wrap"/>
         </Border>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="112,223,0,0" VerticalAlignment="Top" Width="216">
             <TextBox x:Name="Patronymic" TextWrapping="Wrap"/>
@@ -177,7 +177,7 @@
         <Label Grid.Column="1" Content="Подпись председателя РО:" HorizontalAlignment="Left" Margin="362,26,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="14"/>
         <Label Grid.Column="1" Content="Отметки по учету" HorizontalAlignment="Center" Margin="0,88,0,0" VerticalAlignment="Top" FontFamily="Times New Roman" FontSize="16"/>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="40" Margin="16,148,0,0" VerticalAlignment="Top" Width="83" Grid.Column="1">
-            <TextBox TextWrapping="Wrap" TextChanged="TextBox_TextChanged"/>
+            <TextBox TextWrapping="Wrap"/>
         </Border>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="28" Margin="16,121,0,0" VerticalAlignment="Top" Width="83" Grid.Column="1">
             <Label Content="      Дата" FontFamily="Times New Roman"/>
@@ -271,7 +271,7 @@
             <Label Content="Подпись" FontFamily="Times New Roman"/>
         </Border>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="98,338,0,0" VerticalAlignment="Top" Width="58" Grid.Column="1">
-            <TextBox TextWrapping="Wrap" TextChanged="TextBox_TextChanged_1"/>
+            <TextBox TextWrapping="Wrap"/>
         </Border>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="155,338,0,0" VerticalAlignment="Top" Width="58" Grid.Column="1">
             <TextBox TextWrapping="Wrap"/>
@@ -295,7 +295,7 @@
             <TextBox TextWrapping="Wrap"/>
         </Border>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="98,362,0,0" VerticalAlignment="Top" Width="58" Grid.Column="1">
-            <TextBox TextWrapping="Wrap" TextChanged="TextBox_TextChanged"/>
+            <TextBox TextWrapping="Wrap"/>
         </Border>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="155,362,0,0" VerticalAlignment="Top" Width="58" Grid.Column="1">
             <TextBox TextWrapping="Wrap"/>
@@ -342,6 +342,8 @@
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="25" Margin="497,386,0,0" VerticalAlignment="Top" Width="58" Grid.Column="1">
             <TextBox TextWrapping="Wrap"/>
         </Border>
+        <Button Grid.Column="1" Content="Сохранить/Изменить" HorizontalAlignment="Left" Margin="419,770,0,0" VerticalAlignment="Top" Click="ButSave"/>
+        <TextBox x:Name="NumChBil" HorizontalAlignment="Left" Height="17" Margin="300,137,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="154"/>
 
 
 

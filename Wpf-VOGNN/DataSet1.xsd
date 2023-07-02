@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsPropertyName="VOG_NNConnectionString" ConnectionStringObject="Data Source=(localDb)\VOG.NN;Initial Catalog=VOG.NN;Integrated Security=True" IsAppSettingsProperty="false" Modifier="Assembly" Name="VOG.NNConnectionString" ParameterPrefix="@" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="VOG_NNConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="VOG_NNConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Wpf_VOGNN.Properties.Settings.GlobalReference.Default.VOG_NNConnectionString" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="usersTableAdapter" GeneratorDataComponentClassName="usersTableAdapter" Name="users" UserDataComponentName="usersTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="VOG.NNConnectionString" DbObjectName="[VOG.NN].dbo.users" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="VOG_NNConnectionString (Settings)" DbObjectName="[VOG.NN].dbo.users" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>INSERT INTO [dbo].[users] ([login], [password]) VALUES (@login, @password)</CommandText>
@@ -32,7 +32,7 @@
               <Mapping SourceColumn="password" DataSetColumn="password" />
             </Mappings>
             <Sources>
-              <DbSource ConnectionRef="VOG.NNConnectionString" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertUsers" Modifier="Public" Name="InsertUsers" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="InsertUsers">
+              <DbSource ConnectionRef="VOG_NNConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertUsers" Modifier="Public" Name="InsertUsers" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="InsertUsers">
                 <InsertCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>INSERT INTO [dbo].[users] ([login], [password]) VALUES (@login, @password)</CommandText>
@@ -45,25 +45,266 @@
               </DbSource>
             </Sources>
           </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="UchetnayaCardTableAdapter" GeneratorDataComponentClassName="UchetnayaCardTableAdapter" Name="UchetnayaCard" UserDataComponentName="UchetnayaCardTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="VOG_NNConnectionString (Settings)" DbObjectName="[VOG.NN].dbo.UchetnayaCard" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <DeleteCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>DELETE FROM [UchetnayaCard] WHERE (([Id] = @Original_Id) AND ((@IsNull_Surname = 1 AND [Surname] IS NULL) OR ([Surname] = @Original_Surname)) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)) AND ((@IsNull_Patronymic = 1 AND [Patronymic] IS NULL) OR ([Patronymic] = @Original_Patronymic)) AND ((@IsNull_Date_of_birth = 1 AND [Date_of_birth] IS NULL) OR ([Date_of_birth] = @Original_Date_of_birth)) AND ((@IsNull_DataVidachiBileta = 1 AND [DataVidachiBileta] IS NULL) OR ([DataVidachiBileta] = @Original_DataVidachiBileta)) AND ((@IsNull_NumbMembershipCard = 1 AND [NumbMembershipCard] IS NULL) OR ([NumbMembershipCard] = @Original_NumbMembershipCard)) AND ((@IsNull_GroupInvalid = 1 AND [GroupInvalid] IS NULL) OR ([GroupInvalid] = @Original_GroupInvalid)) AND ((@IsNull_StatusSluha = 1 AND [StatusSluha] IS NULL) OR ([StatusSluha] = @Original_StatusSluha)) AND ((@IsNull_NumSprMSE = 1 AND [NumSprMSE] IS NULL) OR ([NumSprMSE] = @Original_NumSprMSE)) AND ((@IsNull_SrokDeystviyaSprMSE = 1 AND [SrokDeystviyaSprMSE] IS NULL) OR ([SrokDeystviyaSprMSE] = @Original_SrokDeystviyaSprMSE)) AND ((@IsNull_Strana = 1 AND [Strana] IS NULL) OR ([Strana] = @Original_Strana)) AND ((@IsNull_Sity = 1 AND [Sity] IS NULL) OR ([Sity] = @Original_Sity)) AND ((@IsNull_SerNumPasport = 1 AND [SerNumPasport] IS NULL) OR ([SerNumPasport] = @Original_SerNumPasport)) AND ((@IsNull_KogdaVidan = 1 AND [KogdaVidan] IS NULL) OR ([KogdaVidan] = @Original_KogdaVidan)) AND ((@IsNull_DataSnyatiyaSUcheta = 1 AND [DataSnyatiyaSUcheta] IS NULL) OR ([DataSnyatiyaSUcheta] = @Original_DataSnyatiyaSUcheta)) AND ((@IsNull_SNILS = 1 AND [SNILS] IS NULL) OR ([SNILS] = @Original_SNILS)) AND ((@IsNull_IPRa = 1 AND [IPRa] IS NULL) OR ([IPRa] = @Original_IPRa)) AND ((@IsNull_VladenieR_GH_YA = 1 AND [VladenieR_GH_YA] IS NULL) OR ([VladenieR_GH_YA] = @Original_VladenieR_GH_YA)))</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Surname" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Surname" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Surname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Surname" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Name" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Patronymic" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Patronymic" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Patronymic" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Patronymic" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Date_of_birth" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Date_of_birth" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Date_of_birth" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Date_of_birth" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DataVidachiBileta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DataVidachiBileta" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_DataVidachiBileta" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DataVidachiBileta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_NumbMembershipCard" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="NumbMembershipCard" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_NumbMembershipCard" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="NumbMembershipCard" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GroupInvalid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GroupInvalid" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_GroupInvalid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="GroupInvalid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_StatusSluha" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StatusSluha" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_StatusSluha" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="StatusSluha" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_NumSprMSE" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="NumSprMSE" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_NumSprMSE" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="NumSprMSE" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SrokDeystviyaSprMSE" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SrokDeystviyaSprMSE" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_SrokDeystviyaSprMSE" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SrokDeystviyaSprMSE" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Strana" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Strana" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Strana" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Strana" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Sity" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Sity" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Sity" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Sity" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SerNumPasport" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SerNumPasport" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_SerNumPasport" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SerNumPasport" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_KogdaVidan" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="KogdaVidan" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_KogdaVidan" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="KogdaVidan" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DataSnyatiyaSUcheta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DataSnyatiyaSUcheta" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_DataSnyatiyaSUcheta" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DataSnyatiyaSUcheta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SNILS" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SNILS" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_SNILS" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SNILS" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IPRa" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IPRa" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_IPRa" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="IPRa" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_VladenieR_GH_YA" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="VladenieR_GH_YA" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_VladenieR_GH_YA" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="VladenieR_GH_YA" SourceColumnNullMapping="false" SourceVersion="Original" />
+                    </Parameters>
+                  </DbCommand>
+                </DeleteCommand>
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>INSERT INTO [UchetnayaCard] ([Surname], [Name], [Patronymic], [Date_of_birth], [DataVidachiBileta], [NumbMembershipCard], [GroupInvalid], [StatusSluha], [NumSprMSE], [PrichinaInvalid], [SrokDeystviyaSprMSE], [Strana], [Sity], [Address], [SerNumPasport], [KemVidan], [KogdaVidan], [MestoRoghdeniya], [DataSnyatiyaSUcheta], [SNILS], [IPRa], [VladenieR_GH_YA], [Obrazovanie], [Dolgnost], [AddressFaktProgh], [NumTel], [Email], [ROVOG], [MOVOG]) VALUES (@Surname, @Name, @Patronymic, @Date_of_birth, @DataVidachiBileta, @NumbMembershipCard, @GroupInvalid, @StatusSluha, @NumSprMSE, @PrichinaInvalid, @SrokDeystviyaSprMSE, @Strana, @Sity, @Address, @SerNumPasport, @KemVidan, @KogdaVidan, @MestoRoghdeniya, @DataSnyatiyaSUcheta, @SNILS, @IPRa, @VladenieR_GH_YA, @Obrazovanie, @Dolgnost, @AddressFaktProgh, @NumTel, @Email, @ROVOG, @MOVOG);
+SELECT Id, Surname, Name, Patronymic, Date_of_birth, DataVidachiBileta, NumbMembershipCard, GroupInvalid, StatusSluha, NumSprMSE, PrichinaInvalid, SrokDeystviyaSprMSE, Strana, Sity, Address, SerNumPasport, KemVidan, KogdaVidan, MestoRoghdeniya, DataSnyatiyaSUcheta, SNILS, IPRa, VladenieR_GH_YA, Obrazovanie, Dolgnost, AddressFaktProgh, NumTel, Email, ROVOG, MOVOG FROM UchetnayaCard WHERE (Id = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Surname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Surname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Patronymic" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Patronymic" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Date_of_birth" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Date_of_birth" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DataVidachiBileta" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DataVidachiBileta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@NumbMembershipCard" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="NumbMembershipCard" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@GroupInvalid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="GroupInvalid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@StatusSluha" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="StatusSluha" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@NumSprMSE" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="NumSprMSE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@PrichinaInvalid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="PrichinaInvalid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SrokDeystviyaSprMSE" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SrokDeystviyaSprMSE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Strana" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Strana" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Sity" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Sity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Address" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Address" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SerNumPasport" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SerNumPasport" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@KemVidan" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="KemVidan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@KogdaVidan" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="KogdaVidan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@MestoRoghdeniya" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MestoRoghdeniya" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DataSnyatiyaSUcheta" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DataSnyatiyaSUcheta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SNILS" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SNILS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@IPRa" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="IPRa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@VladenieR_GH_YA" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="VladenieR_GH_YA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Obrazovanie" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Obrazovanie" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Dolgnost" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Dolgnost" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@AddressFaktProgh" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="AddressFaktProgh" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@NumTel" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="NumTel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Email" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ROVOG" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ROVOG" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@MOVOG" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MOVOG" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>select * from UchetnayaCard</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+                <UpdateCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>UPDATE [UchetnayaCard] SET [Surname] = @Surname, [Name] = @Name, [Patronymic] = @Patronymic, [Date_of_birth] = @Date_of_birth, [DataVidachiBileta] = @DataVidachiBileta, [NumbMembershipCard] = @NumbMembershipCard, [GroupInvalid] = @GroupInvalid, [StatusSluha] = @StatusSluha, [NumSprMSE] = @NumSprMSE, [PrichinaInvalid] = @PrichinaInvalid, [SrokDeystviyaSprMSE] = @SrokDeystviyaSprMSE, [Strana] = @Strana, [Sity] = @Sity, [Address] = @Address, [SerNumPasport] = @SerNumPasport, [KemVidan] = @KemVidan, [KogdaVidan] = @KogdaVidan, [MestoRoghdeniya] = @MestoRoghdeniya, [DataSnyatiyaSUcheta] = @DataSnyatiyaSUcheta, [SNILS] = @SNILS, [IPRa] = @IPRa, [VladenieR_GH_YA] = @VladenieR_GH_YA, [Obrazovanie] = @Obrazovanie, [Dolgnost] = @Dolgnost, [AddressFaktProgh] = @AddressFaktProgh, [NumTel] = @NumTel, [Email] = @Email, [ROVOG] = @ROVOG, [MOVOG] = @MOVOG WHERE (([Id] = @Original_Id) AND ((@IsNull_Surname = 1 AND [Surname] IS NULL) OR ([Surname] = @Original_Surname)) AND ((@IsNull_Name = 1 AND [Name] IS NULL) OR ([Name] = @Original_Name)) AND ((@IsNull_Patronymic = 1 AND [Patronymic] IS NULL) OR ([Patronymic] = @Original_Patronymic)) AND ((@IsNull_Date_of_birth = 1 AND [Date_of_birth] IS NULL) OR ([Date_of_birth] = @Original_Date_of_birth)) AND ((@IsNull_DataVidachiBileta = 1 AND [DataVidachiBileta] IS NULL) OR ([DataVidachiBileta] = @Original_DataVidachiBileta)) AND ((@IsNull_NumbMembershipCard = 1 AND [NumbMembershipCard] IS NULL) OR ([NumbMembershipCard] = @Original_NumbMembershipCard)) AND ((@IsNull_GroupInvalid = 1 AND [GroupInvalid] IS NULL) OR ([GroupInvalid] = @Original_GroupInvalid)) AND ((@IsNull_StatusSluha = 1 AND [StatusSluha] IS NULL) OR ([StatusSluha] = @Original_StatusSluha)) AND ((@IsNull_NumSprMSE = 1 AND [NumSprMSE] IS NULL) OR ([NumSprMSE] = @Original_NumSprMSE)) AND ((@IsNull_SrokDeystviyaSprMSE = 1 AND [SrokDeystviyaSprMSE] IS NULL) OR ([SrokDeystviyaSprMSE] = @Original_SrokDeystviyaSprMSE)) AND ((@IsNull_Strana = 1 AND [Strana] IS NULL) OR ([Strana] = @Original_Strana)) AND ((@IsNull_Sity = 1 AND [Sity] IS NULL) OR ([Sity] = @Original_Sity)) AND ((@IsNull_SerNumPasport = 1 AND [SerNumPasport] IS NULL) OR ([SerNumPasport] = @Original_SerNumPasport)) AND ((@IsNull_KogdaVidan = 1 AND [KogdaVidan] IS NULL) OR ([KogdaVidan] = @Original_KogdaVidan)) AND ((@IsNull_DataSnyatiyaSUcheta = 1 AND [DataSnyatiyaSUcheta] IS NULL) OR ([DataSnyatiyaSUcheta] = @Original_DataSnyatiyaSUcheta)) AND ((@IsNull_SNILS = 1 AND [SNILS] IS NULL) OR ([SNILS] = @Original_SNILS)) AND ((@IsNull_IPRa = 1 AND [IPRa] IS NULL) OR ([IPRa] = @Original_IPRa)) AND ((@IsNull_VladenieR_GH_YA = 1 AND [VladenieR_GH_YA] IS NULL) OR ([VladenieR_GH_YA] = @Original_VladenieR_GH_YA)));
+SELECT Id, Surname, Name, Patronymic, Date_of_birth, DataVidachiBileta, NumbMembershipCard, GroupInvalid, StatusSluha, NumSprMSE, PrichinaInvalid, SrokDeystviyaSprMSE, Strana, Sity, Address, SerNumPasport, KemVidan, KogdaVidan, MestoRoghdeniya, DataSnyatiyaSUcheta, SNILS, IPRa, VladenieR_GH_YA, Obrazovanie, Dolgnost, AddressFaktProgh, NumTel, Email, ROVOG, MOVOG FROM UchetnayaCard WHERE (Id = @Id)</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Surname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Surname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Patronymic" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Patronymic" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Date_of_birth" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Date_of_birth" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DataVidachiBileta" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DataVidachiBileta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@NumbMembershipCard" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="NumbMembershipCard" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@GroupInvalid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="GroupInvalid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@StatusSluha" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="StatusSluha" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@NumSprMSE" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="NumSprMSE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@PrichinaInvalid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="PrichinaInvalid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SrokDeystviyaSprMSE" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SrokDeystviyaSprMSE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Strana" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Strana" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Sity" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Sity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Address" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Address" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SerNumPasport" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SerNumPasport" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@KemVidan" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="KemVidan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@KogdaVidan" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="KogdaVidan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@MestoRoghdeniya" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MestoRoghdeniya" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@DataSnyatiyaSUcheta" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DataSnyatiyaSUcheta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@SNILS" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SNILS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@IPRa" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="IPRa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@VladenieR_GH_YA" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="VladenieR_GH_YA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Obrazovanie" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Obrazovanie" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Dolgnost" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Dolgnost" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@AddressFaktProgh" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="AddressFaktProgh" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@NumTel" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="NumTel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Email" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@ROVOG" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="ROVOG" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@MOVOG" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="MOVOG" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@Original_Id" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Surname" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Surname" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Surname" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Surname" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Name" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Patronymic" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Patronymic" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Patronymic" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Patronymic" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Date_of_birth" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Date_of_birth" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Date_of_birth" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Date_of_birth" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DataVidachiBileta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DataVidachiBileta" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_DataVidachiBileta" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DataVidachiBileta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_NumbMembershipCard" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="NumbMembershipCard" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_NumbMembershipCard" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="NumbMembershipCard" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_GroupInvalid" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="GroupInvalid" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_GroupInvalid" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="GroupInvalid" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_StatusSluha" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="StatusSluha" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_StatusSluha" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="StatusSluha" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_NumSprMSE" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="NumSprMSE" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_NumSprMSE" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="NumSprMSE" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SrokDeystviyaSprMSE" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SrokDeystviyaSprMSE" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_SrokDeystviyaSprMSE" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SrokDeystviyaSprMSE" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Strana" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Strana" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Strana" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Strana" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_Sity" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="Sity" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_Sity" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="Sity" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SerNumPasport" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SerNumPasport" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_SerNumPasport" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SerNumPasport" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_KogdaVidan" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="KogdaVidan" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_KogdaVidan" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="KogdaVidan" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_DataSnyatiyaSUcheta" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="DataSnyatiyaSUcheta" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_DataSnyatiyaSUcheta" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="DataSnyatiyaSUcheta" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_SNILS" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="SNILS" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_SNILS" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="SNILS" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_IPRa" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="IPRa" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_IPRa" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="IPRa" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="Int32" Direction="Input" ParameterName="@IsNull_VladenieR_GH_YA" Precision="0" ProviderType="Int" Scale="0" Size="0" SourceColumn="VladenieR_GH_YA" SourceColumnNullMapping="true" SourceVersion="Original" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="" DataSourceName="" DbType="String" Direction="Input" ParameterName="@Original_VladenieR_GH_YA" Precision="0" ProviderType="NVarChar" Scale="0" Size="0" SourceColumn="VladenieR_GH_YA" SourceColumnNullMapping="false" SourceVersion="Original" />
+                      <Parameter AllowDbNull="false" AutogeneratedName="Id" ColumnName="Id" DataSourceName="[VOG.NN].dbo.UchetnayaCard" DataTypeServer="int" DbType="Int32" Direction="Input" ParameterName="@Id" Precision="0" ProviderType="Int" Scale="0" Size="4" SourceColumn="Id" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </UpdateCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Id" DataSetColumn="Id" />
+              <Mapping SourceColumn="Surname" DataSetColumn="Surname" />
+              <Mapping SourceColumn="Name" DataSetColumn="Name" />
+              <Mapping SourceColumn="Patronymic" DataSetColumn="Patronymic" />
+              <Mapping SourceColumn="Date_of_birth" DataSetColumn="Date_of_birth" />
+              <Mapping SourceColumn="DataVidachiBileta" DataSetColumn="DataVidachiBileta" />
+              <Mapping SourceColumn="NumbMembershipCard" DataSetColumn="NumbMembershipCard" />
+              <Mapping SourceColumn="GroupInvalid" DataSetColumn="GroupInvalid" />
+              <Mapping SourceColumn="StatusSluha" DataSetColumn="StatusSluha" />
+              <Mapping SourceColumn="NumSprMSE" DataSetColumn="NumSprMSE" />
+              <Mapping SourceColumn="PrichinaInvalid" DataSetColumn="PrichinaInvalid" />
+              <Mapping SourceColumn="SrokDeystviyaSprMSE" DataSetColumn="SrokDeystviyaSprMSE" />
+              <Mapping SourceColumn="Strana" DataSetColumn="Strana" />
+              <Mapping SourceColumn="Sity" DataSetColumn="Sity" />
+              <Mapping SourceColumn="Address" DataSetColumn="Address" />
+              <Mapping SourceColumn="SerNumPasport" DataSetColumn="SerNumPasport" />
+              <Mapping SourceColumn="KemVidan" DataSetColumn="KemVidan" />
+              <Mapping SourceColumn="KogdaVidan" DataSetColumn="KogdaVidan" />
+              <Mapping SourceColumn="MestoRoghdeniya" DataSetColumn="MestoRoghdeniya" />
+              <Mapping SourceColumn="DataSnyatiyaSUcheta" DataSetColumn="DataSnyatiyaSUcheta" />
+              <Mapping SourceColumn="SNILS" DataSetColumn="SNILS" />
+              <Mapping SourceColumn="IPRa" DataSetColumn="IPRa" />
+              <Mapping SourceColumn="VladenieR_GH_YA" DataSetColumn="VladenieR_GH_YA" />
+              <Mapping SourceColumn="Obrazovanie" DataSetColumn="Obrazovanie" />
+              <Mapping SourceColumn="Dolgnost" DataSetColumn="Dolgnost" />
+              <Mapping SourceColumn="AddressFaktProgh" DataSetColumn="AddressFaktProgh" />
+              <Mapping SourceColumn="NumTel" DataSetColumn="NumTel" />
+              <Mapping SourceColumn="Email" DataSetColumn="Email" />
+              <Mapping SourceColumn="ROVOG" DataSetColumn="ROVOG" />
+              <Mapping SourceColumn="MOVOG" DataSetColumn="MOVOG" />
+            </Mappings>
+            <Sources>
+              <DbSource ConnectionRef="VOG_NNConnectionString (Settings)" DbObjectName="" DbObjectType="Unknown" GenerateShortCommands="true" GeneratorSourceName="InsertUchCard" Modifier="Public" Name="InsertUchCard" QueryType="NoData" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetDataBy" UserSourceName="InsertUchCard">
+                <InsertCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>INSERT INTO [UchetnayaCard] ([Surname], [Name], [Patronymic], [Date_of_birth], [DataVidachiBileta], [NumbMembershipCard], [GroupInvalid], [StatusSluha], [NumSprMSE], [PrichinaInvalid], [SrokDeystviyaSprMSE], [Strana], [Sity], [Address], [SerNumPasport], [KemVidan], [KogdaVidan], [MestoRoghdeniya], [DataSnyatiyaSUcheta], [SNILS], [IPRa], [VladenieR_GH_YA], [Obrazovanie], [Dolgnost], [AddressFaktProgh], [NumTel], [Email], [ROVOG], [MOVOG]) VALUES (@Surname, @Name, @Patronymic, @Date_of_birth, @DataVidachiBileta, @NumbMembershipCard, @GroupInvalid, @StatusSluha, @NumSprMSE, @PrichinaInvalid, @SrokDeystviyaSprMSE, @Strana, @Sity, @Address, @SerNumPasport, @KemVidan, @KogdaVidan, @MestoRoghdeniya, @DataSnyatiyaSUcheta, @SNILS, @IPRa, @VladenieR_GH_YA, @Obrazovanie, @Dolgnost, @AddressFaktProgh, @NumTel, @Email, @ROVOG, @MOVOG);
+SELECT Id, Surname, Name, Patronymic, Date_of_birth, DataVidachiBileta, NumbMembershipCard, GroupInvalid, StatusSluha, NumSprMSE, PrichinaInvalid, SrokDeystviyaSprMSE, Strana, Sity, Address, SerNumPasport, KemVidan, KogdaVidan, MestoRoghdeniya, DataSnyatiyaSUcheta, SNILS, IPRa, VladenieR_GH_YA, Obrazovanie, Dolgnost, AddressFaktProgh, NumTel, Email, ROVOG, MOVOG FROM UchetnayaCard WHERE (Id = SCOPE_IDENTITY())</CommandText>
+                    <Parameters>
+                      <Parameter AllowDbNull="true" AutogeneratedName="Surname" ColumnName="Surname" DataSourceName="[VOG.NN].dbo.UchetnayaCard" DataTypeServer="nvarchar(255)" DbType="String" Direction="Input" ParameterName="@Surname" Precision="0" ProviderType="NVarChar" Scale="0" Size="255" SourceColumn="Surname" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Name" ColumnName="Name" DataSourceName="[VOG.NN].dbo.UchetnayaCard" DataTypeServer="nvarchar(255)" DbType="String" Direction="Input" ParameterName="@Name" Precision="0" ProviderType="NVarChar" Scale="0" Size="255" SourceColumn="Name" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Patronymic" ColumnName="Patronymic" DataSourceName="[VOG.NN].dbo.UchetnayaCard" DataTypeServer="nvarchar(255)" DbType="String" Direction="Input" ParameterName="@Patronymic" Precision="0" ProviderType="NVarChar" Scale="0" Size="255" SourceColumn="Patronymic" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Date_of_birth" ColumnName="Date_of_birth" DataSourceName="[VOG.NN].dbo.UchetnayaCard" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@Date_of_birth" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Date_of_birth" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="DataVidachiBileta" ColumnName="DataVidachiBileta" DataSourceName="[VOG.NN].dbo.UchetnayaCard" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@DataVidachiBileta" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="DataVidachiBileta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="NumbMembershipCard" ColumnName="NumbMembershipCard" DataSourceName="[VOG.NN].dbo.UchetnayaCard" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@NumbMembershipCard" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="NumbMembershipCard" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="GroupInvalid" ColumnName="GroupInvalid" DataSourceName="[VOG.NN].dbo.UchetnayaCard" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@GroupInvalid" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="GroupInvalid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="StatusSluha" ColumnName="StatusSluha" DataSourceName="[VOG.NN].dbo.UchetnayaCard" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@StatusSluha" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="StatusSluha" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="NumSprMSE" ColumnName="NumSprMSE" DataSourceName="[VOG.NN].dbo.UchetnayaCard" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@NumSprMSE" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="NumSprMSE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="PrichinaInvalid" ColumnName="PrichinaInvalid" DataSourceName="[VOG.NN].dbo.UchetnayaCard" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@PrichinaInvalid" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="PrichinaInvalid" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="SrokDeystviyaSprMSE" ColumnName="SrokDeystviyaSprMSE" DataSourceName="[VOG.NN].dbo.UchetnayaCard" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@SrokDeystviyaSprMSE" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="SrokDeystviyaSprMSE" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Strana" ColumnName="Strana" DataSourceName="[VOG.NN].dbo.UchetnayaCard" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@Strana" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Strana" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Sity" ColumnName="Sity" DataSourceName="[VOG.NN].dbo.UchetnayaCard" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@Sity" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="Sity" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Address" ColumnName="Address" DataSourceName="[VOG.NN].dbo.UchetnayaCard" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@Address" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="Address" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="SerNumPasport" ColumnName="SerNumPasport" DataSourceName="[VOG.NN].dbo.UchetnayaCard" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@SerNumPasport" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="SerNumPasport" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="KemVidan" ColumnName="KemVidan" DataSourceName="[VOG.NN].dbo.UchetnayaCard" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@KemVidan" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="KemVidan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="KogdaVidan" ColumnName="KogdaVidan" DataSourceName="[VOG.NN].dbo.UchetnayaCard" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@KogdaVidan" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="KogdaVidan" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="MestoRoghdeniya" ColumnName="MestoRoghdeniya" DataSourceName="[VOG.NN].dbo.UchetnayaCard" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@MestoRoghdeniya" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="MestoRoghdeniya" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="DataSnyatiyaSUcheta" ColumnName="DataSnyatiyaSUcheta" DataSourceName="[VOG.NN].dbo.UchetnayaCard" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@DataSnyatiyaSUcheta" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="DataSnyatiyaSUcheta" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="SNILS" ColumnName="SNILS" DataSourceName="[VOG.NN].dbo.UchetnayaCard" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@SNILS" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="SNILS" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="IPRa" ColumnName="IPRa" DataSourceName="[VOG.NN].dbo.UchetnayaCard" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@IPRa" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="IPRa" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="VladenieR_GH_YA" ColumnName="VladenieR_GH_YA" DataSourceName="[VOG.NN].dbo.UchetnayaCard" DataTypeServer="nvarchar(50)" DbType="String" Direction="Input" ParameterName="@VladenieR_GH_YA" Precision="0" ProviderType="NVarChar" Scale="0" Size="50" SourceColumn="VladenieR_GH_YA" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Obrazovanie" ColumnName="Obrazovanie" DataSourceName="[VOG.NN].dbo.UchetnayaCard" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@Obrazovanie" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="Obrazovanie" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Dolgnost" ColumnName="Dolgnost" DataSourceName="[VOG.NN].dbo.UchetnayaCard" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@Dolgnost" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="Dolgnost" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="AddressFaktProgh" ColumnName="AddressFaktProgh" DataSourceName="[VOG.NN].dbo.UchetnayaCard" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@AddressFaktProgh" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="AddressFaktProgh" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="NumTel" ColumnName="NumTel" DataSourceName="[VOG.NN].dbo.UchetnayaCard" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@NumTel" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="NumTel" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="Email" ColumnName="Email" DataSourceName="[VOG.NN].dbo.UchetnayaCard" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@Email" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="Email" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="ROVOG" ColumnName="ROVOG" DataSourceName="[VOG.NN].dbo.UchetnayaCard" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@ROVOG" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="ROVOG" SourceColumnNullMapping="false" SourceVersion="Current" />
+                      <Parameter AllowDbNull="true" AutogeneratedName="MOVOG" ColumnName="MOVOG" DataSourceName="[VOG.NN].dbo.UchetnayaCard" DataTypeServer="nvarchar(MAX)" DbType="String" Direction="Input" ParameterName="@MOVOG" Precision="0" ProviderType="NVarChar" Scale="0" Size="2147483647" SourceColumn="MOVOG" SourceColumnNullMapping="false" SourceVersion="Current" />
+                    </Parameters>
+                  </DbCommand>
+                </InsertCommand>
+              </DbSource>
+            </Sources>
+          </TableAdapter>
         </Tables>
         <Sources />
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_UserDSName="DataSet1" msprop:Generator_DataSetName="DataSet1">
+  <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DataSet1" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="users" msprop:Generator_RowEvHandlerName="usersRowChangeEventHandler" msprop:Generator_RowDeletedName="usersRowDeleted" msprop:Generator_RowDeletingName="usersRowDeleting" msprop:Generator_RowEvArgName="usersRowChangeEvent" msprop:Generator_TablePropName="users" msprop:Generator_RowChangedName="usersRowChanged" msprop:Generator_RowChangingName="usersRowChanging" msprop:Generator_TableClassName="usersDataTable" msprop:Generator_RowClassName="usersRow" msprop:Generator_TableVarName="tableusers" msprop:Generator_UserTableName="users">
+        <xs:element name="users" msprop:Generator_RowClassName="usersRow" msprop:Generator_RowEvHandlerName="usersRowChangeEventHandler" msprop:Generator_RowDeletedName="usersRowDeleted" msprop:Generator_RowDeletingName="usersRowDeleting" msprop:Generator_RowEvArgName="usersRowChangeEvent" msprop:Generator_TablePropName="users" msprop:Generator_RowChangedName="usersRowChanged" msprop:Generator_UserTableName="users" msprop:Generator_RowChangingName="usersRowChanging" msprop:Generator_TableClassName="usersDataTable" msprop:Generator_TableVarName="tableusers">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="login" msprop:Generator_ColumnPropNameInRow="login" msprop:Generator_ColumnPropNameInTable="loginColumn" msprop:Generator_ColumnVarNameInTable="columnlogin" msprop:Generator_UserColumnName="login" minOccurs="0">
+              <xs:element name="login" msprop:Generator_UserColumnName="login" msprop:Generator_ColumnPropNameInTable="loginColumn" msprop:Generator_ColumnPropNameInRow="login" msprop:Generator_ColumnVarNameInTable="columnlogin" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="password" msprop:Generator_ColumnPropNameInRow="password" msprop:Generator_ColumnPropNameInTable="passwordColumn" msprop:Generator_ColumnVarNameInTable="columnpassword" msprop:Generator_UserColumnName="password" minOccurs="0">
+              <xs:element name="password" msprop:Generator_UserColumnName="password" msprop:Generator_ColumnPropNameInTable="passwordColumn" msprop:Generator_ColumnPropNameInRow="password" msprop:Generator_ColumnVarNameInTable="columnpassword" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
@@ -73,7 +314,221 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="UchetnayaCard" msprop:Generator_RowEvHandlerName="UchetnayaCardRowChangeEventHandler" msprop:Generator_RowDeletedName="UchetnayaCardRowDeleted" msprop:Generator_RowDeletingName="UchetnayaCardRowDeleting" msprop:Generator_RowEvArgName="UchetnayaCardRowChangeEvent" msprop:Generator_TablePropName="UchetnayaCard" msprop:Generator_RowChangedName="UchetnayaCardRowChanged" msprop:Generator_RowChangingName="UchetnayaCardRowChanging" msprop:Generator_TableClassName="UchetnayaCardDataTable" msprop:Generator_RowClassName="UchetnayaCardRow" msprop:Generator_TableVarName="tableUchetnayaCard" msprop:Generator_UserTableName="UchetnayaCard">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Id" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInRow="Id" msprop:Generator_ColumnPropNameInTable="IdColumn" msprop:Generator_ColumnVarNameInTable="columnId" msprop:Generator_UserColumnName="Id" type="xs:int" />
+              <xs:element name="Surname" msprop:Generator_ColumnPropNameInRow="Surname" msprop:Generator_ColumnPropNameInTable="SurnameColumn" msprop:Generator_ColumnVarNameInTable="columnSurname" msprop:Generator_UserColumnName="Surname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Name" msprop:Generator_ColumnPropNameInRow="Name" msprop:Generator_ColumnPropNameInTable="NameColumn" msprop:Generator_ColumnVarNameInTable="columnName" msprop:Generator_UserColumnName="Name" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Patronymic" msprop:Generator_ColumnPropNameInRow="Patronymic" msprop:Generator_ColumnPropNameInTable="PatronymicColumn" msprop:Generator_ColumnVarNameInTable="columnPatronymic" msprop:Generator_UserColumnName="Patronymic" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="255" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Date_of_birth" msprop:Generator_ColumnPropNameInRow="Date_of_birth" msprop:Generator_ColumnPropNameInTable="Date_of_birthColumn" msprop:Generator_ColumnVarNameInTable="columnDate_of_birth" msprop:Generator_UserColumnName="Date_of_birth" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DataVidachiBileta" msprop:Generator_ColumnPropNameInRow="DataVidachiBileta" msprop:Generator_ColumnPropNameInTable="DataVidachiBiletaColumn" msprop:Generator_ColumnVarNameInTable="columnDataVidachiBileta" msprop:Generator_UserColumnName="DataVidachiBileta" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NumbMembershipCard" msprop:Generator_ColumnPropNameInRow="NumbMembershipCard" msprop:Generator_ColumnPropNameInTable="NumbMembershipCardColumn" msprop:Generator_ColumnVarNameInTable="columnNumbMembershipCard" msprop:Generator_UserColumnName="NumbMembershipCard" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="GroupInvalid" msprop:Generator_ColumnPropNameInRow="GroupInvalid" msprop:Generator_ColumnPropNameInTable="GroupInvalidColumn" msprop:Generator_ColumnVarNameInTable="columnGroupInvalid" msprop:Generator_UserColumnName="GroupInvalid" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="StatusSluha" msprop:Generator_ColumnPropNameInRow="StatusSluha" msprop:Generator_ColumnPropNameInTable="StatusSluhaColumn" msprop:Generator_ColumnVarNameInTable="columnStatusSluha" msprop:Generator_UserColumnName="StatusSluha" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NumSprMSE" msprop:Generator_ColumnPropNameInRow="NumSprMSE" msprop:Generator_ColumnPropNameInTable="NumSprMSEColumn" msprop:Generator_ColumnVarNameInTable="columnNumSprMSE" msprop:Generator_UserColumnName="NumSprMSE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="PrichinaInvalid" msprop:Generator_ColumnPropNameInRow="PrichinaInvalid" msprop:Generator_ColumnPropNameInTable="PrichinaInvalidColumn" msprop:Generator_ColumnVarNameInTable="columnPrichinaInvalid" msprop:Generator_UserColumnName="PrichinaInvalid" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SrokDeystviyaSprMSE" msprop:Generator_ColumnPropNameInRow="SrokDeystviyaSprMSE" msprop:Generator_ColumnPropNameInTable="SrokDeystviyaSprMSEColumn" msprop:Generator_ColumnVarNameInTable="columnSrokDeystviyaSprMSE" msprop:Generator_UserColumnName="SrokDeystviyaSprMSE" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Strana" msprop:Generator_ColumnPropNameInRow="Strana" msprop:Generator_ColumnPropNameInTable="StranaColumn" msprop:Generator_ColumnVarNameInTable="columnStrana" msprop:Generator_UserColumnName="Strana" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Sity" msprop:Generator_ColumnPropNameInRow="Sity" msprop:Generator_ColumnPropNameInTable="SityColumn" msprop:Generator_ColumnVarNameInTable="columnSity" msprop:Generator_UserColumnName="Sity" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Address" msprop:Generator_ColumnPropNameInRow="Address" msprop:Generator_ColumnPropNameInTable="AddressColumn" msprop:Generator_ColumnVarNameInTable="columnAddress" msprop:Generator_UserColumnName="Address" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SerNumPasport" msprop:Generator_ColumnPropNameInRow="SerNumPasport" msprop:Generator_ColumnPropNameInTable="SerNumPasportColumn" msprop:Generator_ColumnVarNameInTable="columnSerNumPasport" msprop:Generator_UserColumnName="SerNumPasport" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KemVidan" msprop:Generator_ColumnPropNameInRow="KemVidan" msprop:Generator_ColumnPropNameInTable="KemVidanColumn" msprop:Generator_ColumnVarNameInTable="columnKemVidan" msprop:Generator_UserColumnName="KemVidan" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="KogdaVidan" msprop:Generator_ColumnPropNameInRow="KogdaVidan" msprop:Generator_ColumnPropNameInTable="KogdaVidanColumn" msprop:Generator_ColumnVarNameInTable="columnKogdaVidan" msprop:Generator_UserColumnName="KogdaVidan" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MestoRoghdeniya" msprop:Generator_ColumnPropNameInRow="MestoRoghdeniya" msprop:Generator_ColumnPropNameInTable="MestoRoghdeniyaColumn" msprop:Generator_ColumnVarNameInTable="columnMestoRoghdeniya" msprop:Generator_UserColumnName="MestoRoghdeniya" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="DataSnyatiyaSUcheta" msprop:Generator_ColumnPropNameInRow="DataSnyatiyaSUcheta" msprop:Generator_ColumnPropNameInTable="DataSnyatiyaSUchetaColumn" msprop:Generator_ColumnVarNameInTable="columnDataSnyatiyaSUcheta" msprop:Generator_UserColumnName="DataSnyatiyaSUcheta" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SNILS" msprop:Generator_ColumnPropNameInRow="SNILS" msprop:Generator_ColumnPropNameInTable="SNILSColumn" msprop:Generator_ColumnVarNameInTable="columnSNILS" msprop:Generator_UserColumnName="SNILS" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IPRa" msprop:Generator_ColumnPropNameInRow="IPRa" msprop:Generator_ColumnPropNameInTable="IPRaColumn" msprop:Generator_ColumnVarNameInTable="columnIPRa" msprop:Generator_UserColumnName="IPRa" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="VladenieR_GH_YA" msprop:Generator_ColumnPropNameInRow="VladenieR_GH_YA" msprop:Generator_ColumnPropNameInTable="VladenieR_GH_YAColumn" msprop:Generator_ColumnVarNameInTable="columnVladenieR_GH_YA" msprop:Generator_UserColumnName="VladenieR_GH_YA" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Obrazovanie" msprop:Generator_ColumnPropNameInRow="Obrazovanie" msprop:Generator_ColumnPropNameInTable="ObrazovanieColumn" msprop:Generator_ColumnVarNameInTable="columnObrazovanie" msprop:Generator_UserColumnName="Obrazovanie" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Dolgnost" msprop:Generator_ColumnPropNameInRow="Dolgnost" msprop:Generator_ColumnPropNameInTable="DolgnostColumn" msprop:Generator_ColumnVarNameInTable="columnDolgnost" msprop:Generator_UserColumnName="Dolgnost" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="AddressFaktProgh" msprop:Generator_ColumnPropNameInRow="AddressFaktProgh" msprop:Generator_ColumnPropNameInTable="AddressFaktProghColumn" msprop:Generator_ColumnVarNameInTable="columnAddressFaktProgh" msprop:Generator_UserColumnName="AddressFaktProgh" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NumTel" msprop:Generator_ColumnPropNameInRow="NumTel" msprop:Generator_ColumnPropNameInTable="NumTelColumn" msprop:Generator_ColumnVarNameInTable="columnNumTel" msprop:Generator_UserColumnName="NumTel" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Email" msprop:Generator_ColumnPropNameInRow="Email" msprop:Generator_ColumnPropNameInTable="EmailColumn" msprop:Generator_ColumnVarNameInTable="columnEmail" msprop:Generator_UserColumnName="Email" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ROVOG" msprop:Generator_ColumnPropNameInRow="ROVOG" msprop:Generator_ColumnPropNameInTable="ROVOGColumn" msprop:Generator_ColumnVarNameInTable="columnROVOG" msprop:Generator_UserColumnName="ROVOG" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="MOVOG" msprop:Generator_ColumnPropNameInRow="MOVOG" msprop:Generator_ColumnPropNameInTable="MOVOGColumn" msprop:Generator_ColumnVarNameInTable="columnMOVOG" msprop:Generator_UserColumnName="MOVOG" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:choice>
     </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:UchetnayaCard" />
+      <xs:field xpath="mstns:Id" />
+    </xs:unique>
   </xs:element>
 </xs:schema>

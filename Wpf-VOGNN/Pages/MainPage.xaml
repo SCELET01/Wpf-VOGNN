@@ -10,8 +10,8 @@
 
     <Grid>
         <Border Background="#66FFFFFF" CornerRadius="20"/>
-        <Button Content="Посмотреть полный список" HorizontalAlignment="Left" Height="40" Margin="28,28,0,0" VerticalAlignment="Top" Width="180" Click="Button_Click"/>
-        <Button Content="Создать учетную карточку" HorizontalAlignment="Left" Height="40" Margin="28,73,0,0" VerticalAlignment="Top" Width="180" Click="ButAddUC_Click"/>
+        <Button Content="Посмотреть полный список" HorizontalAlignment="Left" Height="40" Margin="28,28,0,0" VerticalAlignment="Top" Width="350" Click="Button_Click"/>
+        <Button Content="Создать учетную карточку" HorizontalAlignment="Left" Height="40" Margin="28,73,0,0" VerticalAlignment="Top" Width="350" Click="ButAddUC_Click"/>
         <Calendar HorizontalAlignment="Right" Margin="0,70,75,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
             <Calendar.RenderTransform>
                 <TransformGroup>

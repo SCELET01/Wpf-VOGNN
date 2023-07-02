@@ -10,8 +10,15 @@
 
     <Grid>
         <Border Background="#66FFFFFF" CornerRadius="20">
-            <DataGrid x:Name="DataGridSpisok" Margin="57,0,0,0" AutoGenerateColumns="False" HorizontalAlignment="Left" Width="512" Height="386" VerticalAlignment="Center">
+            <DataGrid x:Name="DataGridSpisok" Margin="57,54,231,54" AutoGenerateColumns="False">
                 <DataGrid.Columns>
+                    <DataGridTemplateColumn>
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Click="ButOpen">Открыть</Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
                     <DataGridTextColumn Binding="{Binding Id}" Header="Id" Width="50"/>
                     <DataGridTextColumn Binding="{Binding Surname}" Header="Фамилия" Width="150"/>
                     <DataGridTextColumn Binding="{Binding Name}" Header="Имя" Width="150"/>
